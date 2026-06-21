@@ -155,4 +155,12 @@ export const en = {
   lang: { ka: "KA", en: "EN" },
 } as const;
 
-export type Dictionary = typeof en;
+// Widen the literal/tuple types produced by `as const` so other locales
+// (e.g. ka) with the same shape but different string values are assignable.
+type Widen<T> = T extends string
+  ? string
+  : T extends readonly (infer U)[]
+    ? readonly Widen<U>[]
+    : { readonly [K in keyof T]: Widen<T[K]> };
+
+export type Dictionary = Widen<typeof en>;

@@ -64,11 +64,11 @@ export const SITE = {
 // HERO SLIDESHOW IMAGES (real tattoo photography)
 // ----------------------------------------------------------------------------
 export const HERO_IMAGES: string[] = [
-  "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1633933037027-26e8b5e36e4e?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1586243287039-23f4c8e2e7ab?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1597852075234-fd721ac361d3?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1561377455-190afb395ed7?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1516008684536-605574d804ce?auto=format&fit=crop&w=1920&q=80",
 ];
 
 // ----------------------------------------------------------------------------
@@ -86,7 +86,7 @@ export const ARTISTS: Artist[] = [
     portraitUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
     workingUrl:
-      "https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1564426622559-5af68da63b96?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "saba-m",
@@ -99,7 +99,7 @@ export const ARTISTS: Artist[] = [
     portraitUrl:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
     workingUrl:
-      "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1552627019-947c3789ffb5?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "lika-t",
@@ -112,7 +112,7 @@ export const ARTISTS: Artist[] = [
     portraitUrl:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=800&q=80",
     workingUrl:
-      "https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1627458514257-41d0ea46e326?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "data-g",
@@ -125,7 +125,7 @@ export const ARTISTS: Artist[] = [
     portraitUrl:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
     workingUrl:
-      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1643513456892-437e82e06f4a?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -133,26 +133,26 @@ export const ARTISTS: Artist[] = [
 // PORTFOLIO / TATTOO GALLERY (20 items, real photography)
 // ----------------------------------------------------------------------------
 export const TATTOOS: TattooItem[] = [
-  { id: 1, imageUrl: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80", title: "Wild Stem", category: "Botanical", artistName: "Nino K." },
-  { id: 2, imageUrl: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=800&q=80", title: "Quiet Line", category: "Fine Line", artistName: "Lika T." },
-  { id: 3, imageUrl: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80", title: "Black Sun", category: "Blackwork", artistName: "Saba M." },
-  { id: 4, imageUrl: "https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=800&q=80", title: "Sparrow", category: "Fine Line", artistName: "Nino K." },
-  { id: 5, imageUrl: "https://images.unsplash.com/photo-1633933037027-26e8b5e36e4e?auto=format&fit=crop&w=800&q=80", title: "Sacred Grid", category: "Geometric", artistName: "Data G." },
-  { id: 6, imageUrl: "https://images.unsplash.com/photo-1590246814883-57c511e76523?auto=format&fit=crop&w=800&q=80", title: "Olive Branch", category: "Botanical", artistName: "Nino K." },
-  { id: 7, imageUrl: "https://images.unsplash.com/photo-1612459284970-e8f027596582?auto=format&fit=crop&w=800&q=80", title: "Mono Dot", category: "Minimal", artistName: "Lika T." },
-  { id: 8, imageUrl: "https://images.unsplash.com/photo-1571689936114-b16146c9570a?auto=format&fit=crop&w=800&q=80", title: "Ink Serif", category: "Lettering", artistName: "Lika T." },
-  { id: 9, imageUrl: "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80", title: "Heavy Fill", category: "Blackwork", artistName: "Saba M." },
-  { id: 10, imageUrl: "https://images.unsplash.com/photo-1559599189-fe84dea4eb79?auto=format&fit=crop&w=800&q=80", title: "Hexline", category: "Geometric", artistName: "Data G." },
-  { id: 11, imageUrl: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=800&q=80", title: "Fern", category: "Botanical", artistName: "Nino K." },
-  { id: 12, imageUrl: "https://images.unsplash.com/photo-1543059080-f9b1272213d5?auto=format&fit=crop&w=800&q=80", title: "Hairline", category: "Fine Line", artistName: "Data G." },
-  { id: 13, imageUrl: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=801&q=80", title: "Single Bloom", category: "Botanical", artistName: "Nino K." },
-  { id: 14, imageUrl: "https://images.unsplash.com/photo-1564131072-bcc7d6516d2e?auto=format&fit=crop&w=800&q=80", title: "Solid Band", category: "Blackwork", artistName: "Saba M." },
-  { id: 15, imageUrl: "https://images.unsplash.com/photo-1551892589-865f69869476?auto=format&fit=crop&w=800&q=80", title: "Small Word", category: "Lettering", artistName: "Lika T." },
-  { id: 16, imageUrl: "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=800&q=80", title: "Triangle Study", category: "Geometric", artistName: "Data G." },
-  { id: 17, imageUrl: "https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?auto=format&fit=crop&w=800&q=80", title: "Thread", category: "Minimal", artistName: "Lika T." },
-  { id: 18, imageUrl: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80", title: "Moon Phase", category: "Fine Line", artistName: "Nino K." },
-  { id: 19, imageUrl: "https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=800&q=80", title: "Script Flow", category: "Lettering", artistName: "Lika T." },
-  { id: 20, imageUrl: "https://images.unsplash.com/photo-1626128665085-483747621778?auto=format&fit=crop&w=800&q=80", title: "Mandala Core", category: "Geometric", artistName: "Data G." },
+  { id: 1, imageUrl: "https://images.unsplash.com/photo-1561491040-14a86bca9106?auto=format&fit=crop&w=800&q=80", title: "Obsidian Spine", category: "Geometric", artistName: "Saba M." },
+  { id: 2, imageUrl: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80", title: "Peony Sleeve", category: "Botanical", artistName: "Nino K." },
+  { id: 3, imageUrl: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80", title: "Folklore Back", category: "Blackwork", artistName: "Saba M." },
+  { id: 4, imageUrl: "https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=800&q=80", title: "Olive Vine", category: "Fine Line", artistName: "Nino K." },
+  { id: 5, imageUrl: "https://images.unsplash.com/photo-1607382007937-fe3a9d196b7a?auto=format&fit=crop&w=800&q=80", title: "Wild Peony", category: "Botanical", artistName: "Nino K." },
+  { id: 6, imageUrl: "https://images.unsplash.com/photo-1586243287039-23f4c8e2e7ab?auto=format&fit=crop&w=800&q=80", title: "Mandala Spine", category: "Geometric", artistName: "Data G." },
+  { id: 7, imageUrl: "https://images.unsplash.com/photo-1570168983832-8989dae1522e?auto=format&fit=crop&w=800&q=80", title: "Love, Cursive", category: "Lettering", artistName: "Lika T." },
+  { id: 8, imageUrl: "https://images.unsplash.com/photo-1561377455-190afb395ed7?auto=format&fit=crop&w=800&q=80", title: "Ornamental Back", category: "Blackwork", artistName: "Saba M." },
+  { id: 9, imageUrl: "https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=800&q=80", title: "Garden Forearm", category: "Botanical", artistName: "Nino K." },
+  { id: 10, imageUrl: "https://images.unsplash.com/photo-1562379825-415aea84ebcf?auto=format&fit=crop&w=800&q=80", title: "Inked Nape", category: "Blackwork", artistName: "Saba M." },
+  { id: 11, imageUrl: "https://images.unsplash.com/photo-1595862645152-2f32bd80ce1d?auto=format&fit=crop&w=800&q=80", title: "Wanderlust", category: "Fine Line", artistName: "Data G." },
+  { id: 12, imageUrl: "https://images.unsplash.com/photo-1736594635582-7f60e14604cc?auto=format&fit=crop&w=800&q=80", title: "Tiny Mark", category: "Minimal", artistName: "Lika T." },
+  { id: 13, imageUrl: "https://images.unsplash.com/photo-1557130641-1b14718f096a?auto=format&fit=crop&w=800&q=80", title: "Black Geometry", category: "Blackwork", artistName: "Saba M." },
+  { id: 14, imageUrl: "https://images.unsplash.com/photo-1704345911745-f2524e8b76f6?auto=format&fit=crop&w=800&q=80", title: "Wildflower", category: "Botanical", artistName: "Nino K." },
+  { id: 15, imageUrl: "https://images.unsplash.com/photo-1531951829979-d658d7e5e8a6?auto=format&fit=crop&w=800&q=80", title: "River Tribal", category: "Geometric", artistName: "Data G." },
+  { id: 16, imageUrl: "https://images.unsplash.com/photo-1547754145-ef9ff306e3f3?auto=format&fit=crop&w=800&q=80", title: "One Word", category: "Minimal", artistName: "Lika T." },
+  { id: 17, imageUrl: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=800&q=80", title: "Studio Session", category: "Fine Line", artistName: "Nino K." },
+  { id: 18, imageUrl: "https://images.unsplash.com/photo-1679621551579-8f7a24b467c2?auto=format&fit=crop&w=800&q=80", title: "Reaper Line", category: "Fine Line", artistName: "Data G." },
+  { id: 19, imageUrl: "https://images.unsplash.com/photo-1607281503082-f01fedd97a5b?auto=format&fit=crop&w=800&q=80", title: "Carved Script", category: "Lettering", artistName: "Lika T." },
+  { id: 20, imageUrl: "https://images.unsplash.com/photo-1651692883249-ed36b3523419?auto=format&fit=crop&w=800&q=80", title: "Wear the Crown", category: "Lettering", artistName: "Lika T." },
 ];
 
 // ----------------------------------------------------------------------------

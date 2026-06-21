@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
+import path from "node:path";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  experimental: {
-    reactCompiler: true,
+  reactCompiler: true,
+  // Pin the workspace root to this project so Next.js doesn't pick up a
+  // stray lockfile from a parent directory when inferring the root.
+  turbopack: {
+    root: path.resolve(__dirname),
   },
   images: {
     remotePatterns: [
