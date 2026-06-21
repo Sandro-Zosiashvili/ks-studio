@@ -77,7 +77,7 @@ export default function Header() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <Logo flicker />
+            <Logo  />
           </a>
 
           <nav className={styles.nav} aria-label="Primary">
