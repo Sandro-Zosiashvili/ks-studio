@@ -38,8 +38,8 @@ export default function CustomCursor() {
     };
 
     const loop = () => {
-      rx += (dx - rx) * 0.18;
-      ry += (dy - ry) * 0.18;
+      rx += (dx - rx) * 0.4;
+      ry += (dy - ry) * 0.4;
       if (ringRef.current) {
         ringRef.current.style.transform = `translate(${rx}px, ${ry}px)`;
       }
