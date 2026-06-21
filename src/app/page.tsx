@@ -1,6 +1,5 @@
 "use client";
 
-import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress/ScrollProgress";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
@@ -21,7 +20,6 @@ import BookingModal from "@/components/BookingModal/BookingModal";
 export default function Home() {
   return (
     <>
-      <CustomCursor />
       <ScrollProgress />
       <Header />
       <main>
