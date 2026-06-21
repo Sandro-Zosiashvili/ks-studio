@@ -69,11 +69,11 @@ export const SITE = {
 // HERO SLIDESHOW IMAGES (real tattoo photography)
 // ----------------------------------------------------------------------------
 export const HERO_IMAGES: string[] = [
+  "https://images.unsplash.com/photo-1605647533135-51b5906087d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1920&q=80",
   "https://images.unsplash.com/photo-1586243287039-23f4c8e2e7ab?auto=format&fit=crop&w=1920&q=80",
   "https://images.unsplash.com/photo-1597852075234-fd721ac361d3?auto=format&fit=crop&w=1920&q=80",
   "https://images.unsplash.com/photo-1561377455-190afb395ed7?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1516008684536-605574d804ce?auto=format&fit=crop&w=1920&q=80",
 ];
 
 // ----------------------------------------------------------------------------
