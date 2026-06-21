@@ -43,20 +43,30 @@ $bp-desktop: 1200px;
   @media (min-width: #{$bp-tablet}) { @content; }
 }
 
-@mixin neon-text($color) {
+@mixin neon-text($color, $intensity: 1) {
   color: $color;
   text-shadow:
-    0 0 4px rgba($color, 0.9),
-    0 0 11px rgba($color, 0.7),
-    0 0 22px rgba($color, 0.5),
-    0 0 42px rgba($color, 0.3);
+    0 0 2px rgba($color, $intensity),
+    0 0 6px rgba($color, $intensity * 0.95),
+    0 0 14px rgba($color, $intensity * 0.8),
+    0 0 28px rgba($color, $intensity * 0.55),
+    0 0 56px rgba($color, $intensity * 0.35);
 }
 
 @mixin neon-box($color, $intensity: 0.6) {
   box-shadow:
-    0 0 6px rgba($color, $intensity),
-    0 0 18px rgba($color, $intensity * 0.7),
-    0 0 38px rgba($color, $intensity * 0.4);
+    0 0 4px rgba($color, $intensity),
+    0 0 12px rgba($color, $intensity * 0.8),
+    0 0 28px rgba($color, $intensity * 0.55),
+    0 0 56px rgba($color, $intensity * 0.32);
+}
+
+// Soft inner+outer glow for framed elements (cards, the map, panels)
+@mixin neon-edge($color, $intensity: 0.5) {
+  box-shadow:
+    0 0 0 1px rgba($color, $intensity * 0.9),
+    0 0 14px rgba($color, $intensity * 0.7),
+    inset 0 0 22px rgba($color, $intensity * 0.18);
 }
 
 @mixin glass {

@@ -6,5 +6,6 @@
 *.pem
 .env*
 
-# IDE
+# IDE / tooling
 /.idea
+/.claude

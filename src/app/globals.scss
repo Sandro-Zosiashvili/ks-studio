@@ -24,6 +24,19 @@ body {
   cursor: none;
 }
 
+// Unified ambient neon wash — ties the whole site into one glowing world.
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(42% 32% at 12% 8%, rgba($neon-pink, 0.07), transparent 70%),
+    radial-gradient(46% 34% at 88% 18%, rgba($neon-cyan, 0.06), transparent 72%),
+    radial-gradient(60% 45% at 50% 108%, rgba($neon-gold, 0.06), transparent 70%);
+}
+
 @media (max-width: 900px), (pointer: coarse) {
   body { cursor: auto; }
 }
@@ -71,8 +84,9 @@ img {
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: $ink; }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, $gold, $lilac);
+  background: linear-gradient(180deg, $neon-gold, $neon-pink, $lilac);
   border-radius: 10px;
+  box-shadow: 0 0 8px rgba($neon-pink, 0.5);
 }
 
 // Section scaffolding

@@ -14,7 +14,11 @@
 
 .oval,
 .k {
-  stroke: $gold;
+  stroke: $neon-gold;
+  filter:
+    drop-shadow(0 0 2px rgba($neon-gold, 0.95))
+    drop-shadow(0 0 7px rgba($gold, 0.65))
+    drop-shadow(0 0 16px rgba($gold, 0.4));
 }
 
 .oval {
@@ -50,6 +54,10 @@
   font-weight: 500;
   color: $cream;
   white-space: nowrap;
+  text-shadow:
+    0 0 5px rgba($neon-gold, 0.55),
+    0 0 14px rgba($gold, 0.35),
+    0 0 30px rgba($gold, 0.18);
 }
 
 .flicker .oval,
@@ -59,13 +67,16 @@
 
 @keyframes neonFlicker {
   0%, 100% {
-    filter: drop-shadow(0 0 2px rgba($gold, 0.8)) drop-shadow(0 0 6px rgba($gold, 0.5));
+    filter:
+      drop-shadow(0 0 3px rgba($neon-gold, 0.95))
+      drop-shadow(0 0 9px rgba($gold, 0.7))
+      drop-shadow(0 0 22px rgba($gold, 0.45));
     opacity: 1;
   }
-  2%, 4% { opacity: 0.4; filter: none; }
+  2%, 4% { opacity: 0.35; filter: none; }
   3% { opacity: 1; }
-  47%, 49% { opacity: 0.6; filter: none; }
+  47%, 49% { opacity: 0.55; filter: drop-shadow(0 0 2px rgba($gold, 0.4)); }
   48% { opacity: 1; }
-  92%, 94% { opacity: 0.3; filter: none; }
+  92%, 94% { opacity: 0.25; filter: none; }
   93% { opacity: 1; }
 }

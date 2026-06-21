@@ -68,7 +68,16 @@ export default function StudioInfo() {
               className={styles.map}
               aria-label={t.studio.directions}
             >
-              <div className={styles.mapGrid} aria-hidden />
+              <iframe
+                className={styles.mapFrame}
+                src={SITE.mapEmbedUrl}
+                title={`${SITE.name} — ${SITE.address[locale]}`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                aria-hidden="true"
+                tabIndex={-1}
+              />
+              <div className={styles.mapTint} aria-hidden />
               <div className={styles.pin}>
                 <MapPin size={30} />
                 <span className={styles.pulse} />

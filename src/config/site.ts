@@ -51,6 +51,12 @@ export const SITE = {
     ka: "სამშ–კვ · 11:00 – 20:00 · ორშ დახურულია",
   },
   mapUrl: "https://maps.app.goo.gl/fuWTWEiHpF7rVwu69",
+  // Keyless Google Maps embed centred on the studio (used as the map background).
+  // Use the final /maps/embed?pb= form directly: the ?output=embed shortcut
+  // 301-redirects through a response carrying X-Frame-Options: SAMEORIGIN, which
+  // browsers block when framed. This resolved URL has no such header.
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m3!2m1!1s41.7233776,44.7593818!6i16",
   social: {
     instagram: "https://instagram.com/ksstudio.tbilisi",
     facebook: "https://facebook.com/ksstudio.tbilisi",

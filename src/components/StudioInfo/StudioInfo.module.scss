@@ -88,30 +88,39 @@
   min-height: 320px;
   border-radius: $radius-lg;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 45%, rgba($lilac, 0.16), transparent 60%),
-    $ink-soft;
-  border: 1px solid rgba($cream, 0.1);
+  background: $ink-soft;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  @include neon-edge($gold, 0.45);
+  transition: box-shadow 0.45s ease, transform 0.45s ease;
 
   &:hover {
-    border-color: rgba($neon-cyan, 0.4);
-    @include neon-box($neon-cyan, 0.2);
+    transform: translateY(-2px);
+    @include neon-edge($neon-cyan, 0.6);
   }
 }
 
-.mapGrid {
+.mapFrame {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba($cream, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba($cream, 0.05) 1px, transparent 1px);
-  background-size: 38px 38px;
-  mask-image: radial-gradient(circle at 50% 45%, #000 40%, transparent 80%);
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+  // Tone the real map into the site's dark, neon-leaning palette
+  filter: grayscale(0.45) contrast(1.05) brightness(0.82) saturate(0.9);
+}
+
+.mapTint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 42%, rgba($neon-pink, 0.22), transparent 48%),
+    radial-gradient(circle at 80% 85%, rgba($neon-cyan, 0.16), transparent 55%),
+    linear-gradient(180deg, rgba($ink, 0.18), rgba($ink, 0.62));
 }
 
 .pin {
@@ -141,8 +150,8 @@
 .mapName {
   margin-top: 0.8rem;
   font-family: $font-display;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.2em;
-  color: $cream;
   z-index: 1;
+  @include neon-text($neon-gold, 0.8);
 }
