@@ -110,7 +110,7 @@
   border: 0;
   pointer-events: none;
   // Tone the real map into the site's dark, neon-leaning palette
-  filter: grayscale(0.45) contrast(1.05) brightness(0.82) saturate(0.9);
+  filter: brightness(0.92);
 }
 
 .mapTint {

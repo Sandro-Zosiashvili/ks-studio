@@ -70,8 +70,6 @@ input, textarea, select {
 img {
   display: block;
   max-width: 100%;
-  // Monochrome flash aesthetic — all photography reads as black-and-white ink.
-  filter: grayscale(1) contrast(1.05) brightness(0.97);
 }
 
 ::selection {
