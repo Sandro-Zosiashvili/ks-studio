@@ -43,15 +43,14 @@ export const SITE = {
   phone: "+995 322 00 11 22",
   whatsapp: "+995577001122",
   address: {
-    en: "12 Erekle II St, Old Tbilisi, Tbilisi 0105, Georgia",
-    ka: "ერეკლე II-ის ქ. 12, ძველი თბილისი, თბილისი 0105, საქართველო",
+    en: "7 Tandzia St, Saburtalo, Tbilisi 0160, Georgia",
+    ka: "ტანძიის ქუჩა 7, საბურთალო, თბილისი 0160, საქართველო",
   },
   hours: {
     en: "Tue–Sun · 11:00 – 20:00 · Mon closed",
     ka: "სამშ–კვ · 11:00 – 20:00 · ორშ დახურულია",
   },
-  mapUrl:
-    "https://www.google.com/maps/search/?api=1&query=41.6938,44.8083",
+  mapUrl: "https://maps.app.goo.gl/fuWTWEiHpF7rVwu69",
   social: {
     instagram: "https://instagram.com/ksstudio.tbilisi",
     facebook: "https://facebook.com/ksstudio.tbilisi",

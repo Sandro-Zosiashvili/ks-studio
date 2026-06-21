@@ -1,6 +1,6 @@
 # KS STUDIO — Fine-Line Tattoo Studio Website
 
-A luxury, fully bilingual (Georgian / English) website for **KS Studio**, a fine-line tattoo studio in Old Tbilisi. Built with Next.js 16 (App Router), React 19, TypeScript, SCSS Modules, GSAP + Framer Motion, and a neon-accented design system.
+A luxury, fully bilingual (Georgian / English) website for **KS Studio**, a fine-line tattoo studio in Saburtalo, Tbilisi. Built with Next.js 16 (App Router), React 19, TypeScript, SCSS Modules, GSAP + Framer Motion, and a neon-accented design system.
 
 ## Quick start
 

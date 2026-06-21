@@ -7,11 +7,11 @@ import "./globals.scss";
 export const metadata: Metadata = {
   title: `${SITE.name} — Fine-Line Tattoo Studio · Tbilisi`,
   description:
-    "KS Studio is a fine-line tattoo studio in the heart of Old Tbilisi, Georgia. Quiet hands, lasting marks. Book a session with our resident artists.",
+    "KS Studio is a fine-line tattoo studio in Saburtalo, Tbilisi, Georgia. Quiet hands, lasting marks. Book a session with our resident artists.",
   keywords: ["tattoo", "Tbilisi", "fine line", "botanical", "blackwork", "KS Studio"],
   openGraph: {
     title: `${SITE.name} — Fine-Line Tattoo Studio`,
-    description: "Quiet hands, lasting marks. Old Tbilisi, Georgia.",
+    description: "Quiet hands, lasting marks. Saburtalo, Tbilisi, Georgia.",
     type: "website",
   },
 };

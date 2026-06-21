@@ -11,7 +11,7 @@ export const en = {
   hero: {
     sign: "KS STUDIO",
     headline: "Your Story, Etched in Skin",
-    sub: "Fine-line tattoo studio in the heart of Old Tbilisi. Quiet hands, lasting marks.",
+    sub: "Fine-line tattoo studio in the heart of Saburtalo, Tbilisi. Quiet hands, lasting marks.",
     bookCta: "Book Now",
     portfolioCta: "View Portfolio",
     scroll: "Scroll",
@@ -93,7 +93,7 @@ export const en = {
     invalid: "Please enter a valid email.",
   },
   footer: {
-    tagline: "Fine-line tattoo studio — Old Tbilisi, Georgia.",
+    tagline: "Fine-line tattoo studio — Saburtalo, Tbilisi, Georgia.",
     nav: "Explore",
     rights: "All rights reserved.",
   },
