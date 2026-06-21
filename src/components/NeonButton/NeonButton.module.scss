@@ -1,0 +1,88 @@
+@use "../../styles/tokens" as *;
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 2.1rem;
+  font-family: $font-body;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: transform 0.25s, box-shadow 0.3s, color 0.3s, background 0.3s, border-color 0.3s;
+  overflow: hidden;
+
+  &:disabled {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+}
+
+.full { width: 100%; }
+
+.label {
+  position: relative;
+  z-index: 2;
+}
+
+.primary {
+  background: linear-gradient(120deg, $gold, $neon-gold);
+  color: $ink;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, $neon-pink, $neon-cyan);
+    opacity: 0;
+    transition: opacity 0.35s;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: $cream;
+    @include neon-box($neon-pink, 0.65);
+    animation: needleVibe 0.18s linear 3;
+    &::before { opacity: 1; }
+  }
+}
+
+.secondary {
+  background: transparent;
+  color: $cream;
+  border: 1px solid rgba($cream, 0.3);
+
+  &:hover {
+    border-color: $neon-cyan;
+    color: $neon-cyan;
+    @include neon-box($neon-cyan, 0.45);
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: rgba($cream, 0.75);
+  padding: 0.5rem 0.8rem;
+  letter-spacing: 0.1em;
+
+  &:hover { color: $gold; }
+}
+
+.pulse {
+  animation: neonPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 6px rgba($gold, 0.5), 0 0 16px rgba($gold, 0.3); }
+  50% { box-shadow: 0 0 12px rgba($neon-pink, 0.7), 0 0 30px rgba($neon-pink, 0.45); }
+}
+
+@keyframes needleVibe {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-0.6px, 0.4px); }
+  50% { transform: translate(0.5px, -0.5px); }
+  75% { transform: translate(-0.4px, -0.3px); }
+}

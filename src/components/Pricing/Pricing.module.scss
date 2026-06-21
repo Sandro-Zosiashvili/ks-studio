@@ -1,0 +1,88 @@
+@use "../../styles/tokens" as *;
+
+.inner {
+  @include container;
+  text-align: center;
+}
+
+.cards {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  text-align: left;
+  @include mobile { grid-template-columns: 1fr; gap: 1.4rem; }
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem 2rem;
+  border-radius: $radius-lg;
+  background: rgba($ink-card, 0.6);
+  border: 1px solid rgba($cream, 0.1);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s ease, box-shadow 0.45s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba($neon-cyan, 0.45);
+    @include neon-box($neon-cyan, 0.25);
+  }
+}
+
+.featured {
+  border-color: rgba($gold, 0.45);
+  background: linear-gradient(
+    180deg,
+    rgba($gold, 0.08),
+    rgba($ink-card, 0.6) 55%
+  );
+  @include neon-box($gold, 0.2);
+
+  &:hover {
+    border-color: rgba($gold, 0.7);
+    @include neon-box($gold, 0.35);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  color: $gold;
+  filter: drop-shadow(0 0 6px rgba($gold, 0.8));
+}
+
+.cardTitle {
+  font-size: 1.7rem;
+  color: $cream;
+  margin-bottom: 0.6rem;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+
+  span {
+    font-family: $font-display;
+    font-size: 2.3rem;
+    @include neon-text($gold);
+  }
+  small {
+    font-size: 0.78rem;
+    color: rgba($cream, 0.5);
+  }
+}
+
+.desc {
+  flex: 1;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba($cream, 0.62);
+  margin-bottom: 1.8rem;
+}

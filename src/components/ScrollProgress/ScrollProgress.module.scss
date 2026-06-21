@@ -1,0 +1,21 @@
+@use "../../styles/tokens" as *;
+
+.track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 1200;
+  background: transparent;
+  pointer-events: none;
+}
+
+.bar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, $gold, $neon-pink 50%, $neon-cyan);
+  box-shadow:
+    0 0 8px rgba($neon-pink, 0.7),
+    0 0 16px rgba($neon-cyan, 0.4);
+}

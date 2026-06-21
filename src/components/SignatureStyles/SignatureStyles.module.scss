@@ -1,0 +1,101 @@
+@use "../../styles/tokens" as *;
+
+.wrap { overflow: hidden; }
+
+.headInner {
+  @include container;
+  margin-bottom: 2.6rem;
+}
+
+.scroller {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { display: none; }
+  padding-bottom: 1rem;
+}
+
+.track {
+  display: flex;
+  gap: 1.4rem;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  width: max-content;
+}
+
+.card {
+  position: relative;
+  width: clamp(260px, 32vw, 360px);
+  height: clamp(360px, 44vw, 480px);
+  flex-shrink: 0;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border: 1px solid rgba($cream, 0.08);
+  transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba($neon-pink, 0.4);
+    box-shadow: 0 0 30px rgba($neon-pink, 0.2);
+
+    .img { transform: scale(1.08); }
+    .magnifier { opacity: 1; transform: scale(1); }
+    .meta { transform: translateY(0); }
+  }
+}
+
+.img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+}
+
+.magnifier {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba($ink, 0.6);
+  backdrop-filter: blur(6px);
+  color: $neon-gold;
+  font-size: 1.3rem;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.meta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: linear-gradient(0deg, rgba($ink, 0.92), transparent);
+  transform: translateY(14px);
+  transition: transform 0.4s;
+}
+
+.cat {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $gold;
+}
+.cardTitle {
+  font-family: $font-display;
+  font-size: 1.5rem;
+  color: $cream;
+}
+.artist {
+  font-size: 0.8rem;
+  color: rgba($cream, 0.6);
+}

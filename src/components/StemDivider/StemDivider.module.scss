@@ -1,0 +1,13 @@
+@use "../../styles/tokens" as *;
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.svg {
+  width: min(600px, 80vw);
+  height: auto;
+  filter: drop-shadow(0 0 3px rgba($gold, 0.4));
+}

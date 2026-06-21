@@ -1,0 +1,66 @@
+@use "../../styles/tokens" as *;
+
+.inner { @include container; }
+
+.steps {
+  position: relative;
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  @include mobile { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+.line {
+  position: absolute;
+  top: 26px;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: rgba($cream, 0.12);
+  @include mobile { display: none; }
+}
+
+.lineFill {
+  height: 100%;
+  width: 100%;
+  transform-origin: left;
+  background: linear-gradient(90deg, $gold, $neon-pink, $neon-cyan);
+  box-shadow: 0 0 8px rgba($neon-pink, 0.5);
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+  font-family: $font-display;
+  font-size: 1.3rem;
+  color: $gold;
+  background: $ink;
+  border: 1px solid rgba($gold, 0.5);
+  box-shadow: 0 0 14px rgba($gold, 0.25);
+}
+
+.stepTitle {
+  font-size: 1.7rem;
+  color: $cream;
+  margin-bottom: 0.6rem;
+}
+
+.stepText {
+  font-size: 0.92rem;
+  color: rgba($cream, 0.62);
+  line-height: 1.6;
+  max-width: 32ch;
+  margin: 0 auto;
+}

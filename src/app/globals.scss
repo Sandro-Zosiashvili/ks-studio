@@ -1,0 +1,116 @@
+@use "../styles/tokens" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: $ink;
+  color: $cream;
+  font-family: $font-body;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  body { cursor: auto; }
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-display;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: none;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  button, a { cursor: pointer; }
+}
+
+input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: $neon-pink;
+  color: $ink;
+}
+
+// Scrollbar
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: $ink; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, $gold, $lilac);
+  border-radius: 10px;
+}
+
+// Section scaffolding
+.section {
+  position: relative;
+  padding: clamp(4rem, 9vw, 8rem) 0;
+}
+
+.eyebrow {
+  font-family: $font-body;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: $gold;
+}
+
+.sectionTitle {
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  margin: 0.6rem 0 0.8rem;
+}
+
+.sectionSub {
+  color: rgba($cream, 0.6);
+  max-width: 46ch;
+  font-size: 1.02rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid $neon-cyan;
+  outline-offset: 3px;
+}

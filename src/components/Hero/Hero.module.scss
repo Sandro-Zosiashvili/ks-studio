@@ -1,0 +1,170 @@
+@use "../../styles/tokens" as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba($ink, 0.55) 0%, rgba($ink, 0.35) 40%, rgba($ink, 0.92) 100%),
+    radial-gradient(ellipse at 50% 30%, transparent 0%, rgba($ink, 0.5) 100%);
+}
+
+.neonWash {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 80%, rgba($neon-pink, 0.18), transparent 42%),
+    radial-gradient(circle at 82% 25%, rgba($neon-cyan, 0.14), transparent 40%);
+  mix-blend-mode: screen;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 900px;
+}
+
+.sign {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+  padding: 0.4rem 1.4rem;
+  border: 1px solid rgba($neon-pink, 0.5);
+  border-radius: 3px;
+  box-shadow: 0 0 14px rgba($neon-pink, 0.4), inset 0 0 14px rgba($neon-pink, 0.2);
+}
+
+.signText {
+  font-family: $font-display;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  letter-spacing: 0.42em;
+  padding-left: 0.42em;
+  @include neon-text($neon-pink);
+  animation: signFlicker 6s infinite steps(1);
+}
+
+@keyframes signFlicker {
+  0%, 100% { opacity: 1; }
+  3%, 5% { opacity: 0.35; }
+  4% { opacity: 1; }
+  43%, 45% { opacity: 0.5; }
+  44% { opacity: 1; }
+  88%, 91% { opacity: 0.25; }
+  89% { opacity: 0.9; }
+}
+
+.headline {
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  font-weight: 300;
+  color: $cream;
+  margin: 0 auto;
+  max-width: 16ch;
+  text-shadow: 0 2px 30px rgba($ink, 0.8);
+  min-height: 1.1em;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  margin-left: 0.06em;
+  background: $neon-gold;
+  box-shadow: 0 0 8px $neon-gold;
+  vertical-align: -0.05em;
+  animation: blink 1s steps(2) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.sub {
+  margin: 1.6rem auto 0;
+  max-width: 52ch;
+  font-size: clamp(0.98rem, 1.6vw, 1.18rem);
+  color: rgba($cream, 0.82);
+  line-height: 1.7;
+}
+
+.ctas {
+  margin-top: 2.6rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dots {
+  position: absolute;
+  bottom: 3.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba($cream, 0.6);
+  transition: all 0.35s;
+}
+
+.dotActive {
+  background: $neon-gold;
+  border-color: $neon-gold;
+  box-shadow: 0 0 10px $neon-gold;
+  width: 26px;
+  border-radius: 6px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba($cream, 0.6);
+}
+
+.scrollIcon {
+  animation: bob 1.8s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(5px); opacity: 1; }
+}

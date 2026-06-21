@@ -1,0 +1,78 @@
+@use "../../styles/tokens" as *;
+
+.wrap {
+  background: radial-gradient(ellipse at 50% 0%, rgba($lilac, 0.06), transparent 60%);
+}
+
+.inner {
+  @include container;
+  text-align: center;
+}
+
+.stage {
+  position: relative;
+  margin-top: 2.6rem;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border: 1px solid rgba($cream, 0.1);
+  border-radius: $radius-lg;
+  background: rgba($ink-card, 0.6);
+  cursor: grab;
+  &:active { cursor: grabbing; }
+}
+
+.quoteIcon {
+  color: $gold;
+  opacity: 0.5;
+  margin: 0 auto 1rem;
+}
+
+.text {
+  font-family: $font-display;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.4;
+  color: $cream;
+}
+
+.name {
+  display: block;
+  margin-top: 1.4rem;
+  font-style: normal;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $gold;
+}
+
+.dots {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba($cream, 0.4);
+  transition: all 0.3s;
+}
+
+.dotActive {
+  background: $neon-pink;
+  border-color: $neon-pink;
+  box-shadow: 0 0 10px $neon-pink;
+  width: 24px;
+  border-radius: 6px;
+}

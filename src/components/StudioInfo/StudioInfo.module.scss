@@ -1,0 +1,148 @@
+@use "../../styles/tokens" as *;
+
+.inner {
+  @include container;
+}
+
+.grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+  @include mobile { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+
+  h4 {
+    font-family: $font-body;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $gold;
+    margin-bottom: 0.35rem;
+  }
+  p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: rgba($cream, 0.78);
+    margin: 0 0 0.2rem;
+  }
+  a {
+    color: rgba($cream, 0.78);
+    transition: color 0.3s ease;
+    &:hover { color: $neon-cyan; }
+  }
+}
+
+.mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: $lilac;
+  margin-top: 2px;
+}
+
+.mapsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  align-self: flex-start;
+  padding: 0.7rem 1.3rem;
+  border: 1px solid rgba($gold, 0.4);
+  border-radius: 100px;
+  color: $gold;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  transition: all 0.35s ease;
+
+  &:hover {
+    color: $ink;
+    background: $gold;
+    @include neon-box($gold, 0.35);
+  }
+}
+
+.mapCard {
+  display: flex;
+}
+
+.map {
+  position: relative;
+  flex: 1;
+  min-height: 320px;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 45%, rgba($lilac, 0.16), transparent 60%),
+    $ink-soft;
+  border: 1px solid rgba($cream, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    border-color: rgba($neon-cyan, 0.4);
+    @include neon-box($neon-cyan, 0.2);
+  }
+}
+
+.mapGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba($cream, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($cream, 0.05) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle at 50% 45%, #000 40%, transparent 80%);
+}
+
+.pin {
+  position: relative;
+  color: $neon-pink;
+  filter: drop-shadow(0 0 8px rgba($neon-pink, 0.8));
+  z-index: 1;
+}
+
+.pulse {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba($neon-pink, 0.5);
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  0% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.9; }
+  80%, 100% { transform: translate(-50%, -50%) scale(3.6); opacity: 0; }
+}
+
+.mapName {
+  margin-top: 0.8rem;
+  font-family: $font-display;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  color: $cream;
+  z-index: 1;
+}

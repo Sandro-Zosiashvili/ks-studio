@@ -1,0 +1,99 @@
+@use "../../styles/tokens" as *;
+
+.inner { @include container; }
+
+.pills {
+  margin: 2.4rem 0 2.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba($cream, 0.18);
+  border-radius: 100px;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  color: rgba($cream, 0.7);
+  transition: all 0.3s;
+  &:hover { border-color: rgba($gold, 0.6); color: $cream; }
+}
+
+.pillActive {
+  border-color: $neon-pink;
+  color: $ink;
+  background: $neon-pink;
+  box-shadow: 0 0 14px rgba($neon-pink, 0.5);
+}
+
+.masonry {
+  column-count: 4;
+  column-gap: 1.2rem;
+  @media (max-width: 1100px) { column-count: 3; }
+  @include mobile { column-count: 2; }
+  @include small { column-count: 1; }
+}
+
+.tile {
+  position: relative;
+  break-inside: avoid;
+  margin: 0 0 1.2rem;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border: 1px solid rgba($cream, 0.06);
+
+  &:hover {
+    .tileImg {
+      transform: scale(1.05);
+      filter: sepia(0.4) saturate(1.1) brightness(0.9);
+    }
+    .caption { opacity: 1; transform: translateY(0); }
+    .frame { opacity: 1; }
+  }
+}
+
+.tileImg {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: linear-gradient(0deg, rgba($ink, 0.92), transparent);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.capCat {
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $gold;
+}
+.capTitle {
+  font-family: $font-display;
+  font-size: 1.3rem;
+  color: $cream;
+}
+.capArtist {
+  font-size: 0.76rem;
+  color: rgba($cream, 0.6);
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  border-radius: $radius-lg;
+  box-shadow: inset 0 0 0 1px rgba($neon-cyan, 0.6), inset 0 0 22px rgba($neon-cyan, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
