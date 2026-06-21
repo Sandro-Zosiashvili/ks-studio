@@ -14,8 +14,5 @@
 .bar {
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, $gold, $neon-pink 50%, $neon-cyan);
-  box-shadow:
-    0 0 8px rgba($neon-pink, 0.7),
-    0 0 16px rgba($neon-cyan, 0.4);
+  background: $cream;
 }

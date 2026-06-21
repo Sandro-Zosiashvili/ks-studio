@@ -7,76 +7,42 @@
 }
 
 .mark {
-  width: 38px;
+  width: 42px;
   height: 38px;
   overflow: visible;
 }
 
-.oval,
-.k {
-  stroke: $neon-gold;
-  filter:
-    drop-shadow(0 0 2px rgba($neon-gold, 0.95))
-    drop-shadow(0 0 7px rgba($gold, 0.65))
-    drop-shadow(0 0 16px rgba($gold, 0.4));
+.wire {
+  stroke: $line-soft;
+  transition: stroke 0.4s ease, transform 0.6s ease;
 }
 
-.oval {
-  stroke-dasharray: 140;
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 0.9s ease;
-}
-
-.k {
-  stroke-dasharray: 80;
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 0.8s ease 0.15s;
-}
-
-.logo:hover .oval {
-  stroke-dashoffset: 140;
-  animation: redraw 0.9s ease forwards;
-}
-.logo:hover .k {
-  stroke-dashoffset: 80;
-  animation: redraw 0.8s ease 0.15s forwards;
-}
-
-@keyframes redraw {
-  0% { stroke-dashoffset: 140; }
-  100% { stroke-dashoffset: 0; }
+.logo:hover .wire {
+  transform: rotate(-2deg) scale(1.04);
 }
 
 .word {
-  font-family: $font-display;
-  font-size: 1.32rem;
-  letter-spacing: 0.22em;
-  font-weight: 500;
+  font-family: $font-gothic;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  font-weight: 400;
   color: $cream;
   white-space: nowrap;
-  text-shadow:
-    0 0 5px rgba($neon-gold, 0.55),
-    0 0 14px rgba($gold, 0.35),
-    0 0 30px rgba($gold, 0.18);
+  line-height: 1;
 }
 
-.flicker .oval,
+// Aged-sign flicker — opacity only, no glow.
+.flicker .wire,
 .flicker .word {
-  animation: neonFlicker 5.5s infinite steps(1);
+  animation: inkFlicker 6s infinite steps(1);
 }
 
-@keyframes neonFlicker {
-  0%, 100% {
-    filter:
-      drop-shadow(0 0 3px rgba($neon-gold, 0.95))
-      drop-shadow(0 0 9px rgba($gold, 0.7))
-      drop-shadow(0 0 22px rgba($gold, 0.45));
-    opacity: 1;
-  }
-  2%, 4% { opacity: 0.35; filter: none; }
+@keyframes inkFlicker {
+  0%, 100% { opacity: 1; }
+  2%, 4% { opacity: 0.55; }
   3% { opacity: 1; }
-  47%, 49% { opacity: 0.55; filter: drop-shadow(0 0 2px rgba($gold, 0.4)); }
-  48% { opacity: 1; }
-  92%, 94% { opacity: 0.25; filter: none; }
+  48% { opacity: 0.7; }
+  49% { opacity: 1; }
+  92%, 94% { opacity: 0.5; }
   93% { opacity: 1; }
 }

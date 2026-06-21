@@ -11,6 +11,7 @@ import Portfolio from "@/components/Portfolio/Portfolio";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import FAQ from "@/components/FAQ/FAQ";
 import Pricing from "@/components/Pricing/Pricing";
+import PiercingCourse from "@/components/PiercingCourse/PiercingCourse";
 import StudioInfo from "@/components/StudioInfo/StudioInfo";
 import Newsletter from "@/components/Newsletter/Newsletter";
 import Footer from "@/components/Footer/Footer";
@@ -32,6 +33,7 @@ export default function Home() {
         <Portfolio />
         <Testimonials />
         <Pricing />
+        <PiercingCourse />
         <FAQ />
         <StudioInfo />
         <Newsletter />

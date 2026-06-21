@@ -5,6 +5,7 @@ export const en = {
     process: "Process",
     portfolio: "Portfolio",
     pricing: "Pricing",
+    course: "Course",
     studio: "Studio",
     book: "Book Now",
   },
@@ -75,6 +76,17 @@ export const en = {
       { title: "Touch-up", price: "₾80", desc: "Free within 60 days. Small refinements to keep your line crisp.", cta: "Arrange touch-up" },
     ],
     perHour: "per hour",
+  },
+  course: {
+    eyebrow: "Learn the craft",
+    title: "Piercing Course",
+    intro: "What will you learn? Our course covers both theory and practice:",
+    points: [
+      "Professional theoretical knowledge of piercing",
+      "How to apply this knowledge in practice",
+      "Hands-on experience with all standard piercing zones",
+    ],
+    cta: "Enquire about the course",
   },
   studio: {
     eyebrow: "Come find us",

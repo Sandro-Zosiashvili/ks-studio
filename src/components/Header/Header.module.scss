@@ -16,7 +16,7 @@
 .scrolled {
   @include glass;
   border-bottom: 1px solid rgba($lilac, 0.25);
-  box-shadow: 0 0 26px rgba($lilac, 0.12), 0 1px 0 rgba($neon-pink, 0.15);
+  box-shadow: 0 1px 0 rgba($cream, 0.1);
 }
 
 .inner {
@@ -55,7 +55,7 @@
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.35s ease;
-    box-shadow: 0 0 6px $neon-pink;
+    box-shadow: none;
   }
 
   &:hover {
@@ -86,7 +86,7 @@
 
 .langActive {
   color: $gold !important;
-  text-shadow: 0 0 8px rgba($gold, 0.6);
+  text-shadow: none;
 }
 
 .langSep { color: rgba($cream, 0.3); }
@@ -120,7 +120,7 @@
   @include glass;
   background: rgba(11, 11, 11, 0.92);
   border-left: 1px solid rgba($neon-pink, 0.3);
-  box-shadow: -10px 0 50px rgba($neon-pink, 0.15);
+  box-shadow: -10px 0 50px rgba($ink, 0.55);
   padding: 2rem 1.8rem;
   display: flex;
   flex-direction: column;

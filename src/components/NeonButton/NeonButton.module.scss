@@ -11,12 +11,12 @@
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-radius: 2px;
-  transition: transform 0.25s, box-shadow 0.3s, color 0.3s, background 0.3s, border-color 0.3s;
+  border-radius: $radius;
+  transition: transform 0.25s, color 0.3s, background 0.3s, border-color 0.3s;
   overflow: hidden;
 
   &:disabled {
-    opacity: 0.45;
+    opacity: 0.4;
     pointer-events: none;
   }
 }
@@ -28,37 +28,37 @@
   z-index: 2;
 }
 
+// Filled ink button: paper on black, inverts on hover.
 .primary {
-  background: linear-gradient(120deg, $gold, $neon-gold);
+  background: $cream;
   color: $ink;
+  border: 1px solid $cream;
 
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, $neon-pink, $neon-cyan);
-    opacity: 0;
-    transition: opacity 0.35s;
+    background: $ink;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
     z-index: 1;
   }
 
   &:hover {
     color: $cream;
-    @include neon-box($neon-pink, 0.65);
-    animation: needleVibe 0.18s linear 3;
-    &::before { opacity: 1; }
+    &::before { transform: scaleX(1); }
   }
 }
 
 .secondary {
   background: transparent;
   color: $cream;
-  border: 1px solid rgba($cream, 0.3);
+  border: 1px solid rgba($cream, 0.35);
 
   &:hover {
-    border-color: $neon-cyan;
-    color: $neon-cyan;
-    @include neon-box($neon-cyan, 0.45);
+    border-color: $cream;
+    background: rgba($cream, 0.06);
   }
 }
 
@@ -68,21 +68,15 @@
   padding: 0.5rem 0.8rem;
   letter-spacing: 0.1em;
 
-  &:hover { color: $gold; }
+  &:hover { color: $cream; }
 }
 
+// Subtle "breathing" outline — no glow, just a hairline that fades.
 .pulse {
-  animation: neonPulse 2.4s ease-in-out infinite;
+  animation: inkPulse 2.6s ease-in-out infinite;
 }
 
-@keyframes neonPulse {
-  0%, 100% { box-shadow: 0 0 6px rgba($gold, 0.5), 0 0 16px rgba($gold, 0.3); }
-  50% { box-shadow: 0 0 12px rgba($neon-pink, 0.7), 0 0 30px rgba($neon-pink, 0.45); }
-}
-
-@keyframes needleVibe {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(-0.6px, 0.4px); }
-  50% { transform: translate(0.5px, -0.5px); }
-  75% { transform: translate(-0.4px, -0.3px); }
+@keyframes inkPulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba($cream, 0.0); }
+  50% { box-shadow: 0 0 0 1px rgba($cream, 0.55); }
 }

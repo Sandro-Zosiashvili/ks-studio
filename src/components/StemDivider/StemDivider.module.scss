@@ -9,5 +9,5 @@
 .svg {
   width: min(600px, 80vw);
   height: auto;
-  filter: drop-shadow(0 0 3px rgba($gold, 0.4));
+  @include ink-bleed(0.3);
 }

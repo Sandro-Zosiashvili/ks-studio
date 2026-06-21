@@ -21,12 +21,9 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(160deg, $ink-soft, $ink);
-  border: 1px solid rgba($neon-pink, 0.35);
+  border: 1px solid rgba($cream, 0.4);
   border-radius: $radius-lg;
-  box-shadow:
-    0 0 30px rgba($neon-pink, 0.25),
-    0 0 80px rgba($lilac, 0.12),
-    inset 0 0 60px rgba($neon-pink, 0.04);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.8);
   overflow: hidden;
 }
 
@@ -78,7 +75,7 @@
 .progressFill {
   height: 100%;
   background: linear-gradient(90deg, $gold, $neon-pink);
-  box-shadow: 0 0 10px $neon-pink;
+  box-shadow: none;
 }
 
 .body {
@@ -124,7 +121,7 @@
   &:focus {
     outline: none;
     border-bottom-color: $neon-gold;
-    box-shadow: 0 1px 0 $neon-gold, 0 6px 14px -10px $neon-gold;
+    box-shadow: 0 1px 0 rgba($cream, 0.5);
   }
 }
 
@@ -150,7 +147,7 @@
 .err {
   font-size: 0.72rem;
   color: $neon-pink;
-  text-shadow: 0 0 6px rgba($neon-pink, 0.5);
+  text-shadow: none;
 }
 
 // Artist list
@@ -176,7 +173,7 @@
 .artistActive {
   border-color: $neon-pink;
   background: rgba($neon-pink, 0.07);
-  box-shadow: 0 0 16px rgba($neon-pink, 0.25);
+  box-shadow: none;
 }
 
 .avatar {
@@ -286,7 +283,7 @@
 .calSelected {
   background: $neon-pink !important;
   color: $ink;
-  box-shadow: 0 0 14px rgba($neon-pink, 0.7);
+  box-shadow: none;
 }
 
 .calEmpty { aspect-ratio: 1; }
@@ -351,7 +348,7 @@
   border-color: $gold;
   background: rgba($gold, 0.12);
   color: $gold;
-  box-shadow: 0 0 10px rgba($gold, 0.3);
+  box-shadow: none;
 }
 
 // Review
@@ -409,7 +406,7 @@
 .checkSvg {
   width: 120px;
   height: 120px;
-  filter: drop-shadow(0 0 14px rgba($neon-pink, 0.5));
+  filter: none;
 }
 .successTitle {
   font-size: 2.2rem;

@@ -24,17 +24,14 @@ body {
   cursor: none;
 }
 
-// Unified ambient neon wash — ties the whole site into one glowing world.
+// Faint paper-grain texture over the black base — aged, hand-printed feel.
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background:
-    radial-gradient(42% 32% at 12% 8%, rgba($neon-pink, 0.07), transparent 70%),
-    radial-gradient(46% 34% at 88% 18%, rgba($neon-cyan, 0.06), transparent 72%),
-    radial-gradient(60% 45% at 50% 108%, rgba($neon-gold, 0.06), transparent 70%);
+  @include paper-grain(0.6);
 }
 
 @media (max-width: 900px), (pointer: coarse) {
@@ -43,8 +40,8 @@ body::before {
 
 h1, h2, h3, h4 {
   font-family: $font-display;
-  font-weight: 300;
-  line-height: 1.05;
+  font-weight: 400;
+  line-height: 1.06;
   letter-spacing: 0.01em;
 }
 
@@ -73,10 +70,12 @@ input, textarea, select {
 img {
   display: block;
   max-width: 100%;
+  // Monochrome flash aesthetic — all photography reads as black-and-white ink.
+  filter: grayscale(1) contrast(1.05) brightness(0.97);
 }
 
 ::selection {
-  background: $neon-pink;
+  background: $cream;
   color: $ink;
 }
 
@@ -84,10 +83,11 @@ img {
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: $ink; }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, $neon-gold, $neon-pink, $lilac);
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba($neon-pink, 0.5);
+  background: $smudge;
+  border-radius: 0;
+  border: 2px solid $ink;
 }
+::-webkit-scrollbar-thumb:hover { background: $cream; }
 
 // Section scaffolding
 .section {

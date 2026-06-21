@@ -21,23 +21,22 @@
   inset: 0;
   background-size: cover;
   background-position: center;
+  // Monochrome ink — the photography reads as black-and-white flash.
+  filter: grayscale(1) contrast(1.08) brightness(0.78);
 }
 
 .overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba($ink, 0.55) 0%, rgba($ink, 0.35) 40%, rgba($ink, 0.92) 100%),
-    radial-gradient(ellipse at 50% 30%, transparent 0%, rgba($ink, 0.5) 100%);
+    linear-gradient(180deg, rgba($ink, 0.82) 0%, rgba($ink, 0.6) 38%, rgba($ink, 0.97) 100%),
+    radial-gradient(ellipse at 50% 32%, rgba($ink, 0.25) 0%, rgba($ink, 0.78) 100%);
 }
 
 .neonWash {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 18% 80%, rgba($neon-pink, 0.18), transparent 42%),
-    radial-gradient(circle at 82% 25%, rgba($neon-cyan, 0.14), transparent 40%);
-  mix-blend-mode: screen;
+  @include paper-grain(0.5);
 }
 
 .content {
@@ -51,18 +50,18 @@
 .sign {
   display: inline-block;
   margin-bottom: 1.6rem;
-  padding: 0.4rem 1.4rem;
-  border: 1px solid rgba($neon-pink, 0.5);
-  border-radius: 3px;
-  box-shadow: 0 0 14px rgba($neon-pink, 0.4), inset 0 0 14px rgba($neon-pink, 0.2);
+  padding: 0.45rem 1.5rem;
+  border-top: 1px solid rgba($cream, 0.4);
+  border-bottom: 1px solid rgba($cream, 0.4);
+  border-radius: 0;
 }
 
 .signText {
-  font-family: $font-display;
-  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
-  letter-spacing: 0.42em;
-  padding-left: 0.42em;
-  @include neon-text($neon-pink);
+  font-family: $font-gothic;
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  letter-spacing: 0.18em;
+  padding-left: 0.18em;
+  color: $cream;
   animation: signFlicker 6s infinite steps(1);
 }
 
@@ -91,8 +90,7 @@
   width: 2px;
   height: 0.9em;
   margin-left: 0.06em;
-  background: $neon-gold;
-  box-shadow: 0 0 8px $neon-gold;
+  background: $cream;
   vertical-align: -0.05em;
   animation: blink 1s steps(2) infinite;
 }
@@ -137,11 +135,10 @@
 }
 
 .dotActive {
-  background: $neon-gold;
-  border-color: $neon-gold;
-  box-shadow: 0 0 10px $neon-gold;
+  background: $cream;
+  border-color: $cream;
   width: 26px;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .scroll {

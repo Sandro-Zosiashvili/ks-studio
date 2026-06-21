@@ -24,7 +24,7 @@
   border-color: $neon-pink;
   color: $ink;
   background: $neon-pink;
-  box-shadow: 0 0 14px rgba($neon-pink, 0.5);
+  box-shadow: none;
 }
 
 .masonry {
@@ -92,7 +92,7 @@
   position: absolute;
   inset: 0;
   border-radius: $radius-lg;
-  box-shadow: inset 0 0 0 1px rgba($neon-cyan, 0.6), inset 0 0 22px rgba($neon-cyan, 0.2);
+  box-shadow: inset 0 0 0 1px rgba($cream, 0.5);
   opacity: 0;
   transition: opacity 0.5s;
   pointer-events: none;

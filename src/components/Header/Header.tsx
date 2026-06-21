@@ -35,6 +35,7 @@ export default function Header() {
     { href: "#process", label: t.nav.process },
     { href: "#portfolio", label: t.nav.portfolio },
     { href: "#pricing", label: t.nav.pricing },
+    { href: "#course", label: t.nav.course },
     { href: "#studio", label: t.nav.studio },
   ];
 
